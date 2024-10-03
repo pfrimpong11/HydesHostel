@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
 
-import HostelExterior from "../assets/images/background.png";
+import HostelExterior from "../assets/images/hydeshostel.png";
 import DormRoom from "../assets/images/room2.png";
 import PrivateRoom from "../assets/images/room1.png";
 import CommonArea from "../assets/images/common-area.png";

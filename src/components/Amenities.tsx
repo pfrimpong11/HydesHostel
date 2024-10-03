@@ -5,11 +5,14 @@ import {
   Utensils,
   Sofa,
   Shirt,
-  Bike,
   Briefcase,
   Sparkles,
-  Map,
   BookOpen,
+  Droplet,
+  Tv,
+  Car,
+  Trash,
+  Wrench
 } from "lucide-react";
 
 interface Amenity {
@@ -19,18 +22,21 @@ interface Amenity {
 
 const Amenities: React.FC = () => {
   const amenities: Amenity[] = [
-    { name: "Free Wi-Fi", icon: <Wifi size={24} /> },
+    { name: "Cloud Wi-Fi", icon: <Wifi size={24} /> },
     { name: "24/7 Reception", icon: <Clock size={24} /> },
     { name: "Fully Equipped Kitchen", icon: <Utensils size={24} /> },
     { name: "Lounge Area", icon: <Sofa size={24} /> },
     { name: "Laundry Facilities", icon: <Shirt size={24} /> },
-    { name: "Bike Rental", icon: <Bike size={24} /> },
     { name: "Luggage Storage", icon: <Briefcase size={24} /> },
     { name: "Daily Cleaning Service", icon: <Sparkles size={24} /> },
-    { name: "Free City Maps", icon: <Map size={24} /> },
-    { name: "Board Games and Books", icon: <BookOpen size={24} /> },
+    { name: "Constant Water Flow", icon: <Droplet size={24} /> },
+    { name: "Study Room", icon: <BookOpen size={24} /> },
+    { name: "TV Room", icon: <Tv size={24} /> },
+    { name: "Car Park", icon: <Car size={24} /> },
+    { name: "Dustbins for Each Room", icon: <Trash size={24} /> },
+    { name: "High Maintenance Culture", icon: <Wrench size={24} /> },
   ];
-
+  
   const sectionStyle: React.CSSProperties = {
     padding: "80px 20px",
     backgroundColor: "#f8f9fa",

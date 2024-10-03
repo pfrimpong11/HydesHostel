@@ -71,11 +71,12 @@ const About: React.FC = () => {
         <div style={contentStyle}>
           <img src={HostelImage} alt="Hydes Hostel" style={imageStyle} />
           <p style={textStyle}>
-            Hydes Hostel has been welcoming travelers from around the world
-            since 2010. Our mission is to provide a comfortable, friendly, and
-            affordable place for adventurers to rest and connect. With our
-            central location and vibrant community atmosphere, we're the perfect
-            base for exploring the city and making new friends.
+            Hydes Hostel has been a welcoming home for KNUST students since 2010.
+            Our mission is to provide a comfortable, friendly, and affordable
+            space for students to relax and connect. With our prime location
+            near the university and a vibrant community atmosphere, we’re the
+            perfect base for students to thrive academically while making
+            lifelong friendships.
           </p>
           <div style={featuresStyle}>
             <div
@@ -100,7 +101,7 @@ const About: React.FC = () => {
                 Friendly Community
               </h3>
               <p style={{ textAlign: "center", fontSize: "0.9rem" }}>
-                Meet travelers from all over the world
+                Meet Students from different faculties
               </p>
             </div>
             <div
@@ -125,7 +126,7 @@ const About: React.FC = () => {
                 Central Location
               </h3>
               <p style={{ textAlign: "center", fontSize: "0.9rem" }}>
-                Easy access to city attractions
+                Easy access to campus facilities
               </p>
             </div>
             <div

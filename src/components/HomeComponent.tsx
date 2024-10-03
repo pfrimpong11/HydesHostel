@@ -1,7 +1,18 @@
 import React from "react";
-import backgroundImage from "../assets/images/background.png";
+import backgroundImage from "../assets/images/hydeshostel.png";
 
 const HomeComponent: React.FC = () => {
+  const phoneNumber = "233244372453";
+  const message = "Hello! Please I would like to book a room.";
+  const encodedMessage = encodeURIComponent(message);
+
+  const handleButtonClick = () => {
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
+      "_blank"
+    );
+  };
+
   const sectionStyle: React.CSSProperties = {
     textAlign: "center",
     padding: "100px 20px",
@@ -70,12 +81,14 @@ const HomeComponent: React.FC = () => {
       <div style={contentStyle}>
         <h1 style={headingStyle}>Welcome to Hydes Hostel</h1>
         <p style={paragraphStyle}>
-          Experience comfort and adventure in the heart of the city. Our hostel
-          offers a unique blend of modern amenities and a warm, friendly
-          atmosphere perfect for travelers from all walks of life.
+          Experience comfort and community in the heart of KNUST. Our hostel
+          offers modern amenities, a supportive atmosphere, and easy access to
+          campus life, making it the perfect choice for students seeking a
+          vibrant and convenient place to stay.
         </p>
         <button
           style={buttonStyle}
+          onClick={handleButtonClick}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = "#0056b3";
             e.currentTarget.style.transform = "translateY(-2px)";

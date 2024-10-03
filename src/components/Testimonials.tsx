@@ -3,7 +3,6 @@ import { Star, Quote } from "lucide-react";
 
 interface Testimonial {
   name: string;
-  country: string;
   comment: string;
   rating: number;
 }
@@ -11,25 +10,34 @@ interface Testimonial {
 const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-      name: "Sarah",
-      country: "USA",
-      comment:
-        "Hydes Hostel was the highlight of my trip! The staff was incredibly friendly and the atmosphere was perfect for meeting other travelers.",
+      name: "Isaac Asante-Kobia",
+      comment: "Hydes Hostel is a nice place to be. The security is very tight and it has quite a big compound. It has two entrances: small way for humans and big gateway for vehicles. No Dusty compound and I love that it has a pharmacy shop just in front of the hostel.",
       rating: 5,
     },
     {
-      name: "Juan",
-      country: "Spain",
-      comment:
-        "Great location and very clean facilities. I loved the communal kitchen and the events organized by the hostel.",
+      name: "Rabbi Tek",
+      comment: "I stayed here as a student and I never had any problems. The management takes very good care of the place and complaints are quickly addressed. Very hospitable reception. Home away from home indeed.",
+      rating: 5,
+    },
+    {
+      name: "Dapson Ishmeal",
+      comment: "One of the best hostels in Kumasi with modern facilities which serves the students of KNUST. A few minutes drive away from KNUST campus. A story building with three floors.",
+      rating: 3,
+    },
+    {
+      name: "Evans Amoah",
+      comment: "Nicely secured hostel facility for students with good accommodation and common floor kitchens.",
       rating: 4,
     },
     {
-      name: "Yuki",
-      country: "Japan",
-      comment:
-        "I felt very safe and comfortable during my stay. The beds were Hydes and the lockers were spacious. Highly recommended!",
-      rating: 5,
+      name: "Rabbi Tek",
+      comment: "It's a cool place for students. They have good and spacious rooms and a well furnished study room.",
+      rating: 4,
+    },
+    {
+      name: "Emmanuella Mensah",
+      comment: "Prices for rooms are very friendly.  Place is always kept very neat. Also has a huge study room for students' advantage",
+      rating: 4,
     },
   ];
 
@@ -97,7 +105,7 @@ const Testimonials: React.FC = () => {
   return (
     <section id="testimonials" style={sectionStyle}>
       <div style={containerStyle}>
-        <h2 style={headingStyle}>What Our Guests Say</h2>
+        <h2 style={headingStyle}>What Our Residents Say</h2>
         <div style={gridStyle}>
           {testimonials.map((testimonial, index) => (
             <div
@@ -118,7 +126,7 @@ const Testimonials: React.FC = () => {
               </p>
               <div style={authorStyle}>
                 <span>
-                  {testimonial.name} - {testimonial.country}
+                  {testimonial.name}
                 </span>
                 <div style={ratingStyle}>
                   {[...Array(testimonial.rating)].map((_, i) => (

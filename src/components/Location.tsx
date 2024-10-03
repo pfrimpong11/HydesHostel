@@ -1,7 +1,6 @@
 import React from "react";
 import { Phone, Mail } from "lucide-react";
-
-import MapImage from "../assets/images/map.png";
+import MapComponent from "./ui/MapComponent";
 
 const Location: React.FC = () => {
   const sectionStyle: React.CSSProperties = {
@@ -78,32 +77,28 @@ const Location: React.FC = () => {
         <h2 style={headingStyle}>Our Location</h2>
         <div style={contentStyle}>
           <p style={descriptionStyle}>
-            We're located in the heart of the city, just a 5-minute walk from
-            Central Station and surrounded by popular attractions, restaurants,
-            and nightlife. Our prime location ensures you'll have easy access to
-            all the city has to offer!
+            We're located just minutes from KNUST campus, offering convenient
+            access to lecture halls, libraries, and student hotspots. Surrounded
+            by essential services, eateries, and vibrant student life, our prime
+            location ensures you'll have everything you need right at your
+            doorstep!
           </p>
           <div style={mapContainerStyle}>
-            {/* Replace this div with an actual map component or embed when available */}
-            <img
-              src={MapImage}
-              alt="Map of Hydes Hostel location"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
+            <MapComponent/>
           </div>
           <div style={addressContainerStyle}>
             <address style={addressStyle}>
               <strong>Hydes Hostel</strong>
               <br />
-              123 Traveler's Street
+              Kotei Road
               <br />
-              Cityville, State 12345
+              Kumasi
               <br />
-              Country
+              Ghana
             </address>
             <div style={contactItemStyle}>
               <Phone size={20} />
-              <span>+1 (555) 123-4567</span>
+              <span>+233 (024) 437-2453</span>
             </div>
             <div style={contactItemStyle}>
               <Mail size={20} />

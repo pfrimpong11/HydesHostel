@@ -97,10 +97,10 @@ const Footer: React.FC = () => {
           <ul style={listStyle}>
             <li style={listItemStyle}>
               <MapPin size={16} style={iconStyle} />
-              123 Traveler's Street
+              Kotei Road
             </li>
-            <li style={listItemStyle}>Cityville, State 12345</li>
-            <li style={listItemStyle}>Country</li>
+            <li style={listItemStyle}>Kumasi</li>
+            <li style={listItemStyle}>Ghana</li>
           </ul>
         </div>
         <div style={columnStyle}>
@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
             </li>
             <li style={listItemStyle}>
               <Phone size={16} style={iconStyle} />
-              +1 (555) 123-4567
+              +233 (024) 437-2453
             </li>
           </ul>
         </div>

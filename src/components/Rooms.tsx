@@ -8,15 +8,15 @@ interface Room {
   id: number
   name: string
   description: string
-  price: number
+  price: string
   capacity: number
   image: string
 }
 
 const rooms: Room[] = [
-  { id: 1, name: "Dorm Room", description: "6-bed mixed dorm", price: 20, capacity: 6, image: Room1 },
-  { id: 2, name: "Private Room", description: "Double bed with ensuite", price: 50, capacity: 2, image: Room2 },
-  { id: 3, name: "Family Room", description: "4-bed room with shared bathroom", price: 80, capacity: 4, image: Room3 },
+  { id: 1, name: "4-in-1 Room", description: "Shared 4-bed room with common facilities", price: "N/A", capacity: 4, image: Room1 },
+  { id: 2, name: "3-in-1 Room", description: "Shared 3-bed room with common facilities", price: "N/A", capacity: 3, image: Room2 },
+  { id: 3, name: "2-in-1 Room", description: "Shared 2-bed room with common facilities", price: "N/A", capacity: 2, image: Room3 },
 ]
 
 const Rooms: React.FC = () => {
@@ -113,11 +113,11 @@ const Rooms: React.FC = () => {
               <div style={infoStyle}>
                 <span style={iconTextStyle}>
                   <Users size={18} style={{ marginRight: '5px' }} />
-                  {room.capacity} guests
+                  {room.capacity} students
                 </span>
                 <span style={priceStyle}>
                   <DollarSign size={18} style={{ marginRight: '2px' }} />
-                  {room.price}/night
+                  {room.price}
                 </span>
               </div>
             </div>
