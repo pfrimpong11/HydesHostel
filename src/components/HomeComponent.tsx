@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundImage from "../assets/images/hydeshostel.png";
+import backgroundImage from "../assets/images/front-image.png";
 
 const HomeComponent: React.FC = () => {
   const phoneNumber = "233244372453";

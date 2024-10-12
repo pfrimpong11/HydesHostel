@@ -4,7 +4,7 @@ import HomeComponent from "../components/HomeComponent";
 import Rooms from "../components/Rooms";
 import Location from "../components/Location";
 import Amenities from "../components/Amenities";
-import PhotoGallery from "../components/PhotoGallery";
+import HomeGallery from "../components/HomeGallery";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 
@@ -21,7 +21,7 @@ const App: React.FC = () => {
       <Rooms />
       <Location />
       <Amenities />
-      <PhotoGallery />
+      <HomeGallery />
       <Testimonials />
       <Footer />
     </div>

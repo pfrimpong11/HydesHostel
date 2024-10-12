@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Rooms", path: "/RoomPage" },
-    { name: "Book", path: "/BookingPage" },
+    { name: "Gallery", path: "/PhotoGallery" },
     { name: "About", path: "/AboutPage" },
     { name: "Contact", path: "/ContactPage" },
   ];

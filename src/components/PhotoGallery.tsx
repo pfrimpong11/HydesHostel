@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
 
-import HostelExterior from "../assets/images/hydeshostel.png";
-import DormRoom from "../assets/images/room2.png";
-import PrivateRoom from "../assets/images/room1.png";
-import CommonArea from "../assets/images/common-area.png";
+import HostelExterior from "../assets/images/front-image.png";
+import Stairs1 from '../assets/images/stairs1.jpg';
+import StudyRoom1 from '../assets/images/studyRoom1.jpg';
+import DryLine1 from '../assets/images/dryLine1.jpg';
+
 import Kitchen from "../assets/images/kitchen.png";
 import StudyRoom from "../assets/images/study-room.png";
 import TvRoom from "../assets/images/tv-room.png";
@@ -20,9 +21,9 @@ const PhotoGallery: React.FC = () => {
 
   const photos: Photo[] = [
     { src: HostelExterior, alt: "Hostel Exterior" },
-    { src: DormRoom, alt: "Dorm Room" },
-    { src: PrivateRoom, alt: "Private Room" },
-    { src: CommonArea, alt: "Common Area" },
+    { src: Stairs1, alt: "Stair way" },
+    { src: StudyRoom1, alt: "Study Room" },
+    { src: DryLine1, alt: "Dry Lines" },
     { src: Kitchen, alt: "Kitchen" },
     { src: StudyRoom, alt: "Study Room" },
     { src: TvRoom, alt: "Tv Room" },
