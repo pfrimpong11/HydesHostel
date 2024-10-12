@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { X } from "lucide-react";
 
 import HostelExterior from "../assets/images/front-image.png";
-import Stairs1 from '../assets/images/stairs1.jpg';
-import StudyRoom1 from '../assets/images/studyRoom1.jpg';
-import DryLine1 from '../assets/images/dryLine1.jpg';
+import Stairs1 from '../assets/images/stairs1.png';
+import StudyRoom1 from '../assets/images/studyRoom1.png';
+import DryLine1 from '../assets/images/dryLine1.png';
 
 import Kitchen from "../assets/images/kitchen.png";
 import StudyRoom from "../assets/images/study-room.png";
