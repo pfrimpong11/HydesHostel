@@ -1,8 +1,6 @@
 import React from "react";
 import {
   Wifi,
-  Clock,
-  Utensils,
   Sofa,
   Shirt,
   Briefcase,
@@ -12,7 +10,8 @@ import {
   Tv,
   Car,
   Trash,
-  Wrench
+  Wrench,
+  Cctv
 } from "lucide-react";
 
 interface Amenity {
@@ -23,8 +22,8 @@ interface Amenity {
 const Amenities: React.FC = () => {
   const amenities: Amenity[] = [
     { name: "Cloud Wi-Fi", icon: <Wifi size={24} /> },
-    { name: "24/7 Reception", icon: <Clock size={24} /> },
-    { name: "Fully Equipped Kitchen", icon: <Utensils size={24} /> },
+    { name: "CCTV Cameras", icon: <Cctv size={24} /> },
+    { name: "High Maintenance Culture", icon: <Wrench size={24} /> },
     { name: "Lounge Area", icon: <Sofa size={24} /> },
     { name: "Laundry Facilities", icon: <Shirt size={24} /> },
     { name: "Luggage Storage", icon: <Briefcase size={24} /> },
@@ -33,8 +32,7 @@ const Amenities: React.FC = () => {
     { name: "Study Room", icon: <BookOpen size={24} /> },
     { name: "TV Room", icon: <Tv size={24} /> },
     { name: "Car Park", icon: <Car size={24} /> },
-    { name: "Dustbins for Each Room", icon: <Trash size={24} /> },
-    { name: "High Maintenance Culture", icon: <Wrench size={24} /> },
+    { name: "Clean Environment", icon: <Trash size={24} /> },
   ];
   
   const sectionStyle: React.CSSProperties = {

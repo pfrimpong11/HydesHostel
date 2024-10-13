@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { X } from "lucide-react";
+import Footer from "./Footer";
 
 import HostelExterior from "../assets/images/front-image.png";
-import Stairs1 from '../assets/images/stairs1.png';
+import Stairs1 from '../assets/images/stairs1.jpg';
 import StudyRoom1 from '../assets/images/studyRoom1.png';
-import DryLine1 from '../assets/images/dryLine1.png';
-
-import Kitchen from "../assets/images/kitchen.png";
-import StudyRoom from "../assets/images/study-room.png";
-import TvRoom from "../assets/images/tv-room.png";
-import CarPark from "../assets//images/car-park.png";
+import DryLine1 from '../assets/images/dryLine1.jpg';
+import CarPark from '../assets/images/carPark1.jpg';
+import FloorEntrance from '../assets/images/floorEntrance.jpg'
+import Kitchen1 from "../assets/images/kitchen1.jpg";
+import TvRoom from "../assets/images/tvRoom.png";
+import Exterior1 from '../assets/images/exterior1.jpg';
+import DryLine2 from '../assets/images/dryLine2.jpg';
+import StudyRoom2 from '../assets/images/studyRoom2.jpg';
+import Exterior2 from '../assets/images/exterior2.jpg';
 
 interface Photo {
   src: string;
@@ -24,10 +28,14 @@ const PhotoGallery: React.FC = () => {
     { src: Stairs1, alt: "Stair way" },
     { src: StudyRoom1, alt: "Study Room" },
     { src: DryLine1, alt: "Dry Lines" },
-    { src: Kitchen, alt: "Kitchen" },
-    { src: StudyRoom, alt: "Study Room" },
+    { src: Kitchen1, alt: "Kitchen" },
+    { src: FloorEntrance, alt: "Floor Entrance" },
     { src: TvRoom, alt: "Tv Room" },
     { src: CarPark, alt: "Car Park" },
+    { src: DryLine2, alt: "Laundry Area" },
+    { src: Exterior1, alt: "Car Park" },
+    { src: StudyRoom2, alt: "Study Room" },
+    { src: Exterior2, alt: "Front View" },
   ];
 
   const sectionStyle: React.CSSProperties = {
@@ -112,81 +120,84 @@ const PhotoGallery: React.FC = () => {
   };
 
   return (
-    <section id="gallery" style={sectionStyle}>
-      <div style={containerStyle}>
-        <h2 style={headingStyle}>Photo Gallery</h2>
-        <div style={galleryStyle}>
-          {photos.map((photo, index) => (
-            <div
-              key={index}
-              style={imageContainerStyle}
-              onClick={() => setSelectedPhoto(photo)}
-              onMouseEnter={(e) => {
-                // Safely assert the target element as an HTMLElement
-                const target = e.currentTarget as HTMLElement;
-                target.style.transform = "scale(1.05)";
-                target.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.15)";
+    <>
+      <section id="gallery" style={sectionStyle}>
+        <div style={containerStyle}>
+          <h2 style={headingStyle}>Photo Gallery</h2>
+          <div style={galleryStyle}>
+            {photos.map((photo, index) => (
+              <div
+                key={index}
+                style={imageContainerStyle}
+                onClick={() => setSelectedPhoto(photo)}
+                onMouseEnter={(e) => {
+                  // Safely assert the target element as an HTMLElement
+                  const target = e.currentTarget as HTMLElement;
+                  target.style.transform = "scale(1.05)";
+                  target.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.15)";
 
-                const overlayElement = target.querySelector(
-                  ".overlay"
-                ) as HTMLElement | null;
-                if (overlayElement) {
-                  overlayElement.style.transform = "translateY(0)";
-                }
-              }}
-              onMouseLeave={(e) => {
-                // Safely assert the target element as an HTMLElement
-                const target = e.currentTarget as HTMLElement;
-                target.style.transform = "scale(1)";
-                target.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.15)";
+                  const overlayElement = target.querySelector(
+                    ".overlay"
+                  ) as HTMLElement | null;
+                  if (overlayElement) {
+                    overlayElement.style.transform = "translateY(0)";
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  // Safely assert the target element as an HTMLElement
+                  const target = e.currentTarget as HTMLElement;
+                  target.style.transform = "scale(1)";
+                  target.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.15)";
 
-                const overlayElement = target.querySelector(
-                  ".overlay"
-                ) as HTMLElement | null;
-                if (overlayElement) {
-                  overlayElement.style.transform = "translateY(100%)";
-                }
-              }}
-            >
-              <img src={photo.src} alt={photo.alt} style={imageStyle} />
-              <div className="overlay" style={overlayStyle}>
-                {photo.alt}
+                  const overlayElement = target.querySelector(
+                    ".overlay"
+                  ) as HTMLElement | null;
+                  if (overlayElement) {
+                    overlayElement.style.transform = "translateY(100%)";
+                  }
+                }}
+              >
+                <img src={photo.src} alt={photo.alt} style={imageStyle} />
+                <div className="overlay" style={overlayStyle}>
+                  {photo.alt}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-      {selectedPhoto && (
-        <div style={modalStyle} onClick={() => setSelectedPhoto(null)}>
-          <img
-            src={selectedPhoto.src}
-            alt={selectedPhoto.alt}
-            style={modalImageStyle}
-          />
-          <button
-            style={closeButtonStyle}
-            onClick={() => setSelectedPhoto(null)}
-          >
-            <X size={24} />
-          </button>
-        </div>
-      )}
-      <style>{`
-        @media (max-width: 768px) {
-          #gallery h2 {
-            font-size: 2rem;
+        {selectedPhoto && (
+          <div style={modalStyle} onClick={() => setSelectedPhoto(null)}>
+            <img
+              src={selectedPhoto.src}
+              alt={selectedPhoto.alt}
+              style={modalImageStyle}
+            />
+            <button
+              style={closeButtonStyle}
+              onClick={() => setSelectedPhoto(null)}
+            >
+              <X size={24} />
+            </button>
+          </div>
+        )}
+        <style>{`
+          @media (max-width: 768px) {
+            #gallery h2 {
+              font-size: 2rem;
+            }
           }
-        }
-        @media (max-width: 480px) {
-          #gallery {
-            padding: 60px 15px;
+          @media (max-width: 480px) {
+            #gallery {
+              padding: 60px 15px;
+            }
+            #gallery h2 {
+              font-size: 1.75rem;
+            }
           }
-          #gallery h2 {
-            font-size: 1.75rem;
-          }
-        }
-      `}</style>
-    </section>
+        `}</style>
+      </section>
+      <Footer />
+    </>
   );
 };
 
